@@ -1,5 +1,5 @@
 {
-  "name": "@actinc/config-commitlint",
+  "name": "@actinc/commitlint-config",
   "version": "4.0.0",
   "description": "ES Lint Configurations for frontend projects",
   "keywords": [

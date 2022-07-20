@@ -21,7 +21,7 @@ export default class Eslint extends Command {
   static description = 'Add ESLint to the current project'
 
   static examples = [
-    '@actinc/cli add eslint -c react',
+    '@actinc/config add eslint -c react',
   ]
 
   static flags = {

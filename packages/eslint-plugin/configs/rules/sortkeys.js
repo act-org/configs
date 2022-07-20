@@ -9,13 +9,13 @@
 
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  plugins: ['filenames'],
   rules: {
-    'filenames/match-exported': [
+    'sort-keys': [
       'error',
-      ['camel', 'pascal'],
-      '\\.(android|config|ios|test)$',
+      'asc',
+      {
+        caseSensitive: false,
+      },
     ],
-    'filenames/match-regex': 'off',
   },
 };

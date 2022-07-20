@@ -1,7 +1,7 @@
 @actinc/config
 =================
 
-@actinc/cli commands
+@actinc/config commands
 
 <!-- toc -->
 * [Usage](#usage)
@@ -10,40 +10,62 @@
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g cli
-$ cli COMMAND
+$ npm install -g @actinc/config
+$ config COMMAND
 running command...
-$ cli (--version)
-cli/1.0.0 linux-x64 node-v16.15.1
-$ cli --help [COMMAND]
+$ config (--version)
+@actinc/config/1.0.0 linux-x64 node-v16.15.1
+$ config --help [COMMAND]
 USAGE
-  $ cli COMMAND
+  $ config COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`cli add eslint`](#cli-add-eslint)
-* [`cli help [COMMAND]`](#cli-help-command)
-* [`cli plugins`](#cli-plugins)
-* [`cli plugins:install PLUGIN...`](#cli-pluginsinstall-plugin)
-* [`cli plugins:inspect PLUGIN...`](#cli-pluginsinspect-plugin)
-* [`cli plugins:install PLUGIN...`](#cli-pluginsinstall-plugin-1)
-* [`cli plugins:link PLUGIN`](#cli-pluginslink-plugin)
-* [`cli plugins:uninstall PLUGIN...`](#cli-pluginsuninstall-plugin)
-* [`cli plugins:uninstall PLUGIN...`](#cli-pluginsuninstall-plugin-1)
-* [`cli plugins:uninstall PLUGIN...`](#cli-pluginsuninstall-plugin-2)
-* [`cli plugins update`](#cli-plugins-update)
+* [`config add eslint`](#config-add-eslint)
+* [`config add prettier`](#config-add-prettier)
+* [`config help [COMMAND]`](#config-help-command)
+* [`config plugins`](#config-plugins)
+* [`config plugins:install PLUGIN...`](#config-pluginsinstall-plugin)
+* [`config plugins:inspect PLUGIN...`](#config-pluginsinspect-plugin)
+* [`config plugins:install PLUGIN...`](#config-pluginsinstall-plugin-1)
+* [`config plugins:link PLUGIN`](#config-pluginslink-plugin)
+* [`config plugins:uninstall PLUGIN...`](#config-pluginsuninstall-plugin)
+* [`config plugins:uninstall PLUGIN...`](#config-pluginsuninstall-plugin-1)
+* [`config plugins:uninstall PLUGIN...`](#config-pluginsuninstall-plugin-2)
+* [`config plugins update`](#config-plugins-update)
 
-## `cli add eslint`
+## `config add eslint`
+
+Add ESLint to the current project
+
+```
+USAGE
+  $ config add eslint [-c nest|react|base] [-f]
+
+FLAGS
+  -c, --config=<option>  [default: base]
+                         <options: nest|react|base>
+  -f, --force
+
+DESCRIPTION
+  Add ESLint to the current project
+
+EXAMPLES
+  @actinc/config add eslint -c react
+```
+
+## `config add prettier`
 
 describe the command here
 
 ```
 USAGE
-  $ cli add eslint [-f]
+  $ config add prettier [-c <value>] [-f]
 
 FLAGS
+  -c, --config=<value>  [default: base]
   -f, --force
 
 DESCRIPTION
@@ -53,13 +75,13 @@ EXAMPLES
   adds ACT eslint to a current working folder
 ```
 
-## `cli help [COMMAND]`
+## `config help [COMMAND]`
 
-Display help for cli.
+Display help for config.
 
 ```
 USAGE
-  $ cli help [COMMAND] [-n]
+  $ config help [COMMAND] [-n]
 
 ARGUMENTS
   COMMAND  Command to show help for.
@@ -68,18 +90,18 @@ FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for cli.
+  Display help for config.
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.12/src/commands/help.ts)_
 
-## `cli plugins`
+## `config plugins`
 
 List installed plugins.
 
 ```
 USAGE
-  $ cli plugins [--core]
+  $ config plugins [--core]
 
 FLAGS
   --core  Show core plugins.
@@ -88,18 +110,18 @@ DESCRIPTION
   List installed plugins.
 
 EXAMPLES
-  $ cli plugins
+  $ config plugins
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.0.11/src/commands/plugins/index.ts)_
 
-## `cli plugins:install PLUGIN...`
+## `config plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ cli plugins:install PLUGIN...
+  $ config plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -121,23 +143,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ cli plugins add
+  $ config plugins add
 
 EXAMPLES
-  $ cli plugins:install myplugin 
+  $ config plugins:install myplugin 
 
-  $ cli plugins:install https://github.com/someuser/someplugin
+  $ config plugins:install https://github.com/someuser/someplugin
 
-  $ cli plugins:install someuser/someplugin
+  $ config plugins:install someuser/someplugin
 ```
 
-## `cli plugins:inspect PLUGIN...`
+## `config plugins:inspect PLUGIN...`
 
 Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ cli plugins:inspect PLUGIN...
+  $ config plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN  [default: .] Plugin to inspect.
@@ -150,16 +172,16 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ cli plugins:inspect myplugin
+  $ config plugins:inspect myplugin
 ```
 
-## `cli plugins:install PLUGIN...`
+## `config plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ cli plugins:install PLUGIN...
+  $ config plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -181,23 +203,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ cli plugins add
+  $ config plugins add
 
 EXAMPLES
-  $ cli plugins:install myplugin 
+  $ config plugins:install myplugin 
 
-  $ cli plugins:install https://github.com/someuser/someplugin
+  $ config plugins:install https://github.com/someuser/someplugin
 
-  $ cli plugins:install someuser/someplugin
+  $ config plugins:install someuser/someplugin
 ```
 
-## `cli plugins:link PLUGIN`
+## `config plugins:link PLUGIN`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ cli plugins:link PLUGIN
+  $ config plugins:link PLUGIN
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -215,16 +237,16 @@ DESCRIPTION
   command will override the user-installed or core plugin implementation. This is useful for development work.
 
 EXAMPLES
-  $ cli plugins:link myplugin
+  $ config plugins:link myplugin
 ```
 
-## `cli plugins:uninstall PLUGIN...`
+## `config plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ cli plugins:uninstall PLUGIN...
+  $ config plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -237,17 +259,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ cli plugins unlink
-  $ cli plugins remove
+  $ config plugins unlink
+  $ config plugins remove
 ```
 
-## `cli plugins:uninstall PLUGIN...`
+## `config plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ cli plugins:uninstall PLUGIN...
+  $ config plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -260,17 +282,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ cli plugins unlink
-  $ cli plugins remove
+  $ config plugins unlink
+  $ config plugins remove
 ```
 
-## `cli plugins:uninstall PLUGIN...`
+## `config plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ cli plugins:uninstall PLUGIN...
+  $ config plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -283,17 +305,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ cli plugins unlink
-  $ cli plugins remove
+  $ config plugins unlink
+  $ config plugins remove
 ```
 
-## `cli plugins update`
+## `config plugins update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ cli plugins update [-h] [-v]
+  $ config plugins update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.

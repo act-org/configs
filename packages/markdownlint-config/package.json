@@ -1,5 +1,5 @@
 {
-  "name": "@actinc/config-markdownlint",
+  "name": "@actinc/markdownlint-config",
   "version": "1.0.0",
   "description": "ES Lint Configurations for frontend projects",
   "keywords": [

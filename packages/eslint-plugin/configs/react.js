@@ -17,25 +17,14 @@ module.exports = {
     './typescript',
     'plugin:jest/recommended',
     'plugin:jsx-a11y/recommended',
+    './rules/filenames',
+    './rules/sortkeys',
     './rules/react',
     './rules/pretter',
   ],
-  plugins: ['jest', 'jsx-a11y', 'filenames'],
+  plugins: ['jest', 'jsx-a11y'],
   rules: {
-    'filenames/match-exported': [
-      'error',
-      ['camel', 'pascal'],
-      '\\.(android|config|ios|test|config.js)$',
-    ],
-    'filenames/match-regex': 'off',
     'jsx-a11y/href-no-hash': 'off',
-    'sort-keys': [
-      'error',
-      'asc',
-      {
-        caseSensitive: false,
-      },
-    ],
   },
   settings: {
     react: {
