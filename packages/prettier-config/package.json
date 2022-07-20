@@ -15,7 +15,7 @@
     "url": "git+https://github.com/act-org/eslint-config.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "eslint ."
   },
   "bugs": {
     "url": "https://github.com/act-org/eslint-config/issues"
