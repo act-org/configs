@@ -1,0 +1,27 @@
+{
+  "name": "@actinc/config-commitlint",
+  "version": "4.0.0",
+  "description": "ES Lint Configurations for frontend projects",
+  "keywords": [
+    "ACT",
+    "eslint"
+  ],
+  "author": "Justin Watkins <justin.watkins@act.org>",
+  "homepage": "https://github.com/act-org/eslint-config/tree/main/packages/config-eslint#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-org/eslint-config.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/act-org/eslint-config/issues"
+  },
+  "dependencies": {
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3"
+  }
+}
