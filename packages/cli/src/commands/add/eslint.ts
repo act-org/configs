@@ -1,21 +1,21 @@
 import { Command, Flags } from '@oclif/core';
-import { exec as execCallback } from 'node:child_process';
 import { writeFile } from 'node:fs/promises';
 import { npminstall } from '../../utils/npminstall';
+import { updatepackage } from '../../utils/updatepackage';
 
-export const exec = (command: string): Promise<string> => {
-  // eslint-disable-next-line promise/avoid-new
-  return new Promise((resolve, reject) => {
-    // eslint-disable-next-line promise/prefer-await-to-callbacks
-    execCallback(command, (error, stdout, stderr) => {
-      if (error) {
-        reject(stderr)
-      }
-
-      resolve(stdout)
-    })
-  })
+enum Mode {
+  package = 'package',
+  file = 'file'
 };
+type Modes = keyof typeof Mode;
+
+enum Config {
+  nest = 'nest',
+  react = 'react',
+  base = 'base',
+  typescript = 'typescript'
+}
+type Configs = keyof typeof Config;
 
 export default class Eslint extends Command {
   static description = 'Add ESLint to the current project'
@@ -25,23 +25,55 @@ export default class Eslint extends Command {
   ]
 
   static flags = {
-
-    config: Flags.string({char: 'c', default: 'base', name: 'config', options: ['nest', 'react', 'base']}),
-    force: Flags.boolean({char: 'f'}),
+    config: Flags.string({ char: 'c', default: 'base', name: 'config', options: ['nest', 'react', 'base', 'typescript'] }),
+    mode: Flags.string({ char: 'm', default: 'package', name: 'mode', options: ['package', 'file'] }),
+    force: Flags.boolean({ char: 'f' }),
   }
 
   static args = [];
 
-  public async run(): Promise<void> {
-    const {flags} = await this.parse(Eslint)
-    this.log('Installing the latest @actinc/prettier-config package')
-    await npminstall('@typescript-eslint/eslint-plugin', '@typescript-eslint/parser', 'eslint-config-prettier', 'eslint-config-airbnb', 'eslint-plugin-disable', 'eslint-plugin-filenames', 'eslint-plugin-import', 'eslint-plugin-jest', 'eslint-plugin-jsx-a11y', 'eslint-plugin-lodash', 'eslint-plugin-new-with-error', 'eslint-plugin-no-loops', 'eslint-plugin-prettier', 'eslint-plugin-promise', 'eslint-plugin-react', 'eslint-plugin-react-hooks', 'eslint-plugin-security', 'prettier')
-    const result = await exec(`npm install -D @actinc/eslint-config@latest${flags.force ? ' --force' : ''}`)
-    this.log(result)
-    const template = `// automatically generated, it's best not to edit this file
-module.exports = {
-  extends: ["@actinc/eslint-config/${flags.config}"]
+  /**
+   * Main work method to write the various eslint configs
+   * @param mode
+   * @param config
+   */
+  private async writeEslint(mode: Modes, config: Configs) {
+    const eslintconfig = {
+      extends: [`plugin:@actinc/${config}`],
+      plugins: [`@actinc`]
+    }
+    const prettierconfig = "@actinc/pretter-config";
+    const eslintfileconfig = `// automatically generated, it's best not to edit this file
+module.exports = ${JSON.stringify(eslintconfig, null, 2)};`;
+    const eslintignoretemplate = `node_modules
+dist
+build
+`;
+    const prettierfileconfig = `module.exports = {
+  ...require("${prettierconfig}"),
+  semi: false,
 };`
-    await writeFile('./.eslintrc.js', template)
+    await writeFile('./.eslintignore', eslintignoretemplate);
+    if (mode === Mode.file) {
+      await writeFile('./.eslintrc.js', eslintfileconfig);
+      await writeFile('./.prettierrc.js', prettierfileconfig);
+    } else {
+      await updatepackage({ key: 'eslintConfig', value: eslintconfig }, { key: 'prettier', value: "@actinc/pretter-config" });
+    }
+  }
+
+  /**
+   * Run the command
+   */
+  public async run(): Promise<void> {
+    const { flags } = await this.parse(Eslint);
+    try {
+      const installOutput = await npminstall('@actinc/eslint-plugin@latest', '@actinc/prettier-config@latest', 'eslint', 'prettier');
+      this.log(installOutput);
+      await this.writeEslint(flags.mode as Modes, flags.config as Configs);
+      this.log('done');
+    } catch (error) {
+      this.error(JSON.stringify(error, null, 2));
+    }
   }
 }

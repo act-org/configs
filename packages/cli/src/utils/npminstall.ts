@@ -1,8 +1,6 @@
-import {exec} from './exec'
+import { exec } from './exec';
 
 export const npminstall = async (...packages: string[]): Promise<string> => {
-  const result = await exec(`npm install -D ${packages.join(' ')}`)
-  return result
+  const result = await exec(`npm install -D ${packages.join(' ')}`);
+  return result;
 }
-
-export default npminstall

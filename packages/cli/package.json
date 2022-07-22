@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "ACT Command Line Utility",
   "author": "",
-  "bin": {
-    "config": "./bin/dev"
-  },
+  "bin": "./bin/dev",
   "homepage": "https://github.com/packages/hello-world",
   "license": "MIT",
   "main": "dist/index.js",
