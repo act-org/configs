@@ -1,3 +1,8 @@
+---
+id: config
+sidebar_position: 7
+---
+
 @actinc/config
 =================
 

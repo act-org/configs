@@ -1,22 +1,24 @@
+---
+id: eslint-plugin
+sidebar_position: 2
+---
+
 # @actinc/eslint-plugin
 
-This serves as a plugin to store the variety of pre-configured ACT eslint plugins and rules used for projects.  This is organized as a plugin to enable the current and upcoming requirement of ESLint to only load additional plugins from plugins.  This way, you only need to have eslint and prettier installed as peer dependencies.
+This serves as a plugin to store the variety of pre-configured ACT eslint plugins and rules used for projects.  
+This is organized as a plugin to enable the current and upcoming requirement of ESLint to only load additional plugins from plugins.  
+This way, you only need to have eslint and prettier installed as peer dependencies.
 
 ## Installation
 ```bash
-npm i -D @actinc/eslint-plugin eslint prettier
-```
-
-Optionally, this works well with @actinc/prettier-config and it recommended
-
-```
 npm i -D @actinc/eslint-plugin @actinc/prettier-config eslint prettier
 ```
+
 ## Configuration
-The easist way is to add this to your package.json file
+The easiest way is to add this to your package.json file
 
 ```json
-  "prettier": "@actinc/pretter-config",
+  "prettier": "@actinc/prettier-config",
   "eslintConfig": {
     "extends": [
       "plugin:@actinc/react"
@@ -27,8 +29,13 @@ The easist way is to add this to your package.json file
   }
   ```
 
-If you need more sophisticated customization options, you can instead put this into an .eslintrc.js and .prettierrc.js file or whatever supported configuration file you prefer.
+If you need more sophisticated customization options, you can instead put this into an .eslintrc.js and/or .prettierrc.js file or whatever supported configuration file you prefer.
 
+```bash
+echo "module.exports = {extends: ['plugin:@actinc/react']}" > .eslintrc.js
+echo "module.exports = module.exports = {...require('@actinc/prettier-config')};" > .prettierrc.js
+
+```
 
 ### Configuration Options
 

@@ -5,5 +5,17 @@
 
     ],
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "cSpell.words": [
+      "actinc",
+      "browserslist",
+      "clsx",
+      "commitlint",
+      "Cursi",
+      "typecheck",
+      "Weeden"
+    ],
+    "[mdx]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

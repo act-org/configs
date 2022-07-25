@@ -2,32 +2,33 @@
   "author": "Jon Cursi <jon.cursi@act-et.org>",
   "bugs": {
     "email": "jon.cursi@act-et.org",
-    "url": "https://github.com/act-org/eslint-config/issues"
+    "url": "https://github.com/act-org/configs/issues"
   },
-  "commitlint": {"extends": ["@actinc"]},
+  "commitlint": {
+    "extends": [
+      "@actinc"
+    ]
+  },
   "contributors": [
     "Jon Cursi <jon.cursi@act-et.org>",
-    "Adam Weeden <adam.weeden@encoura.org>"
+    "Adam Weeden <adam.weeden@encoura.org>",
+    "Justin Watkins <justin.watkins@act.org>"
   ],
-  "dependencies": {
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
-    "markdownlint-cli": "0.31.1",
-    "npm-run-all": "4.1.5"
-  },
   "description": "ACT's preferred configs for TypeScript, Prettier, ESLint, CommitLint, and MarkdownLint.",
   "devDependencies": {
     "@actinc/commitlint-config": "file:./packages/commitlint-config",
     "@actinc/eslint-plugin": "file:./packages/eslint-plugin",
+    "@actinc/markdownlint-config": "file:./packages/markdownlint-config",
     "@actinc/prettier-config": "file:./packages/prettier-config",
     "@actinc/typescript-config": "file:./packages/typescript-config",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
     "@types/eslint": "^8.4.5",
     "@types/prettier": "^2.6.3",
-    "eslint": "^8.20.0",
+    "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-disable": "^2.0.3",
@@ -45,8 +46,10 @@
     "eslint-plugin-security": "^1.5.0",
     "husky": "^8.0.0",
     "jest": "28.1.3",
+    "jsonc-loader": "^0.1.1",
     "lerna": "^5.1.8",
     "lint-staged": "13.0.3",
+    "markdownlint-cli": "0.31.1",
     "nx": "^14.4.3",
     "prettier": "^2.7.1",
     "standard-version": "^9.5.0",
@@ -54,7 +57,9 @@
   },
   "eslintConfig": {
     "extends": "plugin:@actinc/base",
-    "plugins": ["@actinc"]
+    "plugins": [
+      "@actinc"
+    ]
   },
   "homepage": "https://github.com/act-org/eslint-config#readme",
   "husky": {
@@ -88,12 +93,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/act-org/eslint-config.git"
+    "url": "git+https://github.com/act-org/configs.git"
   },
   "scripts": {
     "test": "lerna run test",
+    "build": "lerna run build",
     "postinstall": "lerna bootstrap",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "lerna run start"
   },
   "version": "1.0.0"
 }

@@ -1,0 +1,1 @@
+../../../prettier-config/README.md

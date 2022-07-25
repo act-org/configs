@@ -12,13 +12,13 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/act-org/eslint-config.git"
+    "url": "git+https://github.com/act-org/configs.git"
   },
   "scripts": {
     "test": "eslint ."
   },
   "bugs": {
-    "url": "https://github.com/act-org/eslint-config/issues"
+    "url": "https://github.com/act-org/configs/issues"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.7",

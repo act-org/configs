@@ -15,12 +15,12 @@
   "main": "tsconfig.json",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/act-org/eslint-config.git"
+    "url": "git+https://github.com/act-org/configs.git"
   },
   "scripts": {
   },
   "bugs": {
-    "url": "https://github.com/act-org/eslint-config/issues"
+    "url": "https://github.com/act-org/configs/issues"
   },
   "peerDependencies": {
     "typescript": "4.x"
