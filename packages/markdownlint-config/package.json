@@ -24,6 +24,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
+    "release": "standard-version --path ./ --lerna-package markdownlint-config -t markdownlint-config",
     "test": "eslint ."
   }
 }

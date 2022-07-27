@@ -24,6 +24,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
+    "release": "standard-version --path ./ --lerna-package prettier-config -t prettier-config",
     "test": "eslint ."
   },
   "peerDependencies": {

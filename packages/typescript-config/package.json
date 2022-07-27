@@ -23,7 +23,9 @@
     "README.md",
     "CHANGELOG.md"
   ],
-  "scripts": {},
+  "scripts": {
+    "release": "standard-version --path ./ --lerna-package typescript-config -t typescript-config"
+  },
   "peerDependencies": {
     "typescript": "4.x"
   }

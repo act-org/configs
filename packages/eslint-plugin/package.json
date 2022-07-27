@@ -25,6 +25,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
+    "release": "standard-version --path ./ --lerna-package eslint-plugin -t eslint-plugin",
     "test": "eslint ."
   },
   "dependencies": {
