@@ -12,7 +12,7 @@ module.exports = {
   env: {
     jest: true,
   },
-  extends: ['./typescript', 'plugin:jest/recommended', './rules/pretter'],
+  extends: ['./typescript', 'plugin:jest/recommended', './rules/prettier'],
   plugins: ['jest'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',

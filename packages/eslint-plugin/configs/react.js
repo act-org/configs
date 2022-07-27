@@ -20,7 +20,7 @@ module.exports = {
     './rules/filenames',
     './rules/sortkeys',
     './rules/react',
-    './rules/pretter',
+    './rules/prettier',
   ],
   plugins: ['jest', 'jsx-a11y'],
   rules: {
