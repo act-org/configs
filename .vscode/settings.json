@@ -12,6 +12,7 @@
       "clsx",
       "commitlint",
       "Cursi",
+      "noloops",
       "typecheck",
       "Weeden"
     ],

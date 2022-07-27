@@ -6,22 +6,24 @@
     "ACT",
     "eslint"
   ],
-  "author": "Justin Watkins <justin.watkins@act.org>",
-  "homepage": "https://github.com/act-org/eslint-config/tree/main/packages/config-eslint#readme",
-  "license": "MIT",
-  "files": [
-    "tsconfig.json"
-  ],
-  "main": "tsconfig.json",
+  "homepage": "https://github.com/act-org/configs/tree/main/packages/typescript-config",
+  "bugs": {
+    "url": "https://github.com/act-org/configs/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/act-org/configs.git"
   },
-  "scripts": {
-  },
-  "bugs": {
-    "url": "https://github.com/act-org/configs/issues"
-  },
+  "license": "MIT",
+  "author": "Justin Watkins <justin.watkins@act.org>",
+  "main": "tsconfig.json",
+  "files": [
+    "package.json",
+    "tsconfig.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {},
   "peerDependencies": {
     "typescript": "4.x"
   }

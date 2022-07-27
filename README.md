@@ -8,6 +8,8 @@ sidebar_position: 1
 
 This collection of packages are for organizing the various Node based project tools and configurations as well as a CLI tool for adopting this configuration setup quickly.
 
+See [the docs](https://act-org.github.io/configs/docs/intro/)
+
 ## Getting Started
 
 The easiest way is the run the CLI tool to setup your project.  This CLI tool does make changes to your project configuration, so be sure that you are operating on a clean unchanged repository or 

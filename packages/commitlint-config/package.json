@@ -4,20 +4,26 @@
   "description": "ACT standard commit lint configuration",
   "keywords": [
     "ACT",
-    "eslint"
+    "commitlint"
   ],
-  "author": "Justin Watkins <justin.watkins@act.org>",
-  "homepage": "https://github.com/act-org/eslint-config/tree/main/packages/config-eslint#readme",
-  "license": "MIT",
-  "main": "index.js",
+  "homepage": "https://github.com/act-org/configs/tree/main/packages/commitlint-config",
+  "bugs": {
+    "url": "https://github.com/act-org/configs/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/act-org/configs.git"
   },
+  "license": "MIT",
+  "author": "Justin Watkins <justin.watkins@act.org>",
+  "main": "index.js",
+  "files": [
+    "package.json",
+    "index.js",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "test": "eslint ."
-  },
-  "bugs": {
-    "url": "https://github.com/act-org/configs/issues"
   }
 }
