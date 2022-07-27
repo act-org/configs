@@ -22,5 +22,8 @@
     "index.js",
     "README.md",
     "CHANGELOG.md"
-  ]
+  ],
+  "scripts": {
+    "test": "eslint ."
+  }
 }
