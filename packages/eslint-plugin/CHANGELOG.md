@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/act-org/configs/compare/eslint-plugin1.0.0...eslint-plugin1.1.0) (2022-07-27)
+
+
+### Bug Fixes
+
+* Fix typo ([50b3c05](https://github.com/act-org/configs/commit/50b3c056bfa4ea28d481819c13e2c3c0543bcd20))
+
 ## 1.0.0 (2022-07-27)
 
 
