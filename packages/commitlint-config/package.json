@@ -26,5 +26,8 @@
   "scripts": {
     "release": "standard-version --path ./ --lerna-package commitlint-config -t commitlint-config",
     "test": "eslint ."
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

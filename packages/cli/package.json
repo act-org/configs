@@ -2,18 +2,31 @@
   "name": "@actinc/config",
   "version": "1.0.0",
   "description": "ACT Command Line Utility",
-  "author": "",
-  "bin": "./bin/dev",
+  "keywords": [
+    "oclif"
+  ],
   "homepage": "https://github.com/packages/hello-world",
-  "license": "MIT",
-  "main": "dist/index.js",
+  "bugs": "https://github.com/packages/hello-world/issues",
   "repository": "packages/hello-world",
+  "license": "MIT",
+  "author": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": "./bin/dev",
   "files": [
     "/bin",
     "/dist",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "version": "oclif readme && git add README.md"
+  },
   "dependencies": {
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
@@ -27,6 +40,12 @@
     "ts-node": "^10.2.1",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "oclif": {
     "bin": "config",
@@ -42,21 +61,5 @@
         "description": "Say hello to the world and others"
       }
     }
-  },
-  "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint . --ext .ts",
-    "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "yarn lint",
-    "prepack": "npm run build && oclif manifest && oclif readme",
-    "version": "oclif readme && git add README.md"
-  },
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "bugs": "https://github.com/packages/hello-world/issues",
-  "keywords": [
-    "oclif"
-  ],
-  "types": "dist/index.d.ts"
+  }
 }
