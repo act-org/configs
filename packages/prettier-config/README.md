@@ -25,5 +25,5 @@ OR
 If you need more fine grained control
 
 ```bash
-echo "module.exports = module.exports = {...require('@actinc/prettier-config')};" > .prettierrc.js
+echo "module.exports = {...require('@actinc/prettier-config')};" > .prettierrc.js
 ```
