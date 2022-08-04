@@ -20,6 +20,7 @@ module.exports = {
     './rules/noloops',
     './rules/promise',
     './rules/security',
+    './rules/cspell',
     './rules/prettier',
   ],
   plugins: [],

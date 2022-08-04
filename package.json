@@ -14,15 +14,23 @@
     "Adam Weeden <adam.weeden@encoura.org>",
     "Justin Watkins <justin.watkins@act.org>"
   ],
+  "cspell": {
+    "language": "en",
+    "import": [
+      "@actinc/cspell-config"
+    ]
+  },
   "description": "ACT's preferred configs for TypeScript, Prettier, ESLint, CommitLint, and MarkdownLint.",
   "devDependencies": {
     "@actinc/commitlint-config": "file:./packages/commitlint-config",
+    "@actinc/cspell-config": "file:./packages/cspell-config",
     "@actinc/eslint-plugin": "file:./packages/eslint-plugin",
     "@actinc/markdownlint-config": "file:./packages/markdownlint-config",
     "@actinc/prettier-config": "file:./packages/prettier-config",
     "@actinc/typescript-config": "file:./packages/typescript-config",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
+    "@cspell/eslint-plugin": "^6.5.0",
     "@types/eslint": "^8.4.5",
     "@types/prettier": "^2.6.4",
     "@types/webpack": "^5.28.0",
@@ -50,7 +58,6 @@
     "lerna": "^5.3.0",
     "lint-staged": "13.0.3",
     "markdownlint-cli": "0.32.1",
-    "npm-check-updates": "^16.0.4",
     "nx": "^14.5.1",
     "prettier": "^2.7.1",
     "standard-version": "^9.5.0",

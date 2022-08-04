@@ -1,0 +1,36 @@
+{
+  "name": "@actinc/cspell-config",
+  "version": "1.0.0",
+  "description": "CSpell Configurations",
+  "keywords": [
+    "ACT",
+    "cspell"
+  ],
+  "homepage": "https://github.com/act-org/configs/tree/main/packages/cspell-config",
+  "bugs": {
+    "url": "https://github.com/act-org/configs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-org/configs.git"
+  },
+  "license": "MIT",
+  "author": "Justin Watkins <justin.watkins@act.org>",
+  "files": [
+    "package.json",
+    "cspell.config.js",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": "./cspell-ext.json",
+    "./cspell-ext.json": "./cspell-ext.json",
+    "./cspell.config.js": "./cspell.config.js"
+  },
+  "scripts": {
+    "release": "standard-version --path ./ --lerna-package cspell-config -t cspell-config"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

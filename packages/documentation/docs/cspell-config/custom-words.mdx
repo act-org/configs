@@ -1,0 +1,30 @@
+# Custom Words
+Adding custom words to your project is straight forward.
+In both the cspell configuration options (package.json or cspell.json file),
+you can add a words section with any custom words.
+
+**Example:**
+```javascript
+// package.json example
+"cspell": {
+  "language": "en",
+  "import": [
+    "@actinc/cspell-config"
+  ],
+  "words": [
+    "customword"
+  ]
+}
+
+
+// cspell.json example
+{
+  "language": "en",
+  "import": [
+    "@actinc/cspell-config"
+  ],
+  "words": [
+    "customword"
+  ]
+}
+```

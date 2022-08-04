@@ -11,22 +11,28 @@ This way, you only need to have eslint and prettier installed as peer dependenci
 
 ## Installation
 ```bash
-npm i -D @actinc/eslint-plugin @actinc/prettier-config eslint prettier
+npm i -D @actinc/eslint-plugin @actinc/prettier-config @actinc/cspell-config eslint prettier
 ```
 
 ## Configuration
 The easiest way is to add this to your package.json file
 
 ```json
-  "prettier": "@actinc/prettier-config",
-  "eslintConfig": {
-    "extends": [
-      "plugin:@actinc/react"
-    ],
-    "plugins": [
-      "@actinc"
-    ]
-  }
+"cspell": {
+  "language": "en",
+  "import": [
+    "@actinc/cspell-config"
+  ] 
+} 
+"prettier": "@actinc/prettier-config",
+"eslintConfig": {
+  "extends": [
+    "plugin:@actinc/react"
+  ],
+  "plugins": [
+    "@actinc"
+  ]
+}
   ```
 
 If you need more sophisticated customization options, you can instead put this into an .eslintrc.js and/or .prettierrc.js file or whatever supported configuration file you prefer.

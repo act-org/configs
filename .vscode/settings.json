@@ -1,22 +1,28 @@
 {
-    "editor.codeActionsOnSave": [
-        "source.organizeImports",
-        "source.fixAll"
-
-    ],
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.tabSize": 2,
-    "cSpell.words": [
-      "actinc",
-      "browserslist",
-      "clsx",
-      "commitlint",
-      "Cursi",
-      "noloops",
-      "typecheck",
-      "Weeden"
-    ],
-    "[mdx]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "editor.codeActionsOnSave": [
+    "source.organizeImports",
+    "source.fixAll"
+  ],
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.tabSize": 2,
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [
+    "myplugin",
+    "cursi",
+    "commandsstop",
+    "someplugin",
+    "someuser",
+    "oclif",
+    "pluginsinspect",
+    "pluginsinstall",
+    "pluginslink",
+    "pluginsuninstall",
+    "tocstop",
+    "usagestop",
+    "postpack",
+    "posttest",
+    "weeden",
+  ]
 }

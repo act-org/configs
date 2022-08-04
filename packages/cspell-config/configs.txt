@@ -1,0 +1,8 @@
+browserslist
+clsx
+commitlint
+globby
+multilines
+noloops
+sortkeys
+typecheck

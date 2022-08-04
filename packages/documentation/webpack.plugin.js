@@ -13,6 +13,10 @@ module.exports = function() {
             {
               test: /tsconfig.json$/, // loader just to render the tsconfig file
               type: 'asset/source'
+            },
+            {
+              test: /.txt$/,
+              type: 'asset/source'
             }
           ]
         }
