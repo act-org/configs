@@ -18,7 +18,9 @@
   "author": "Justin Watkins <justin.watkins@act.org>",
   "files": [
     "package.json",
-    "cspell.config.js",
+    "cspell-ext.json",
+    "act.txt",
+    "configs.txt",
     "README.md",
     "CHANGELOG.md"
   ],

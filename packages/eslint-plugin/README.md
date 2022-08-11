@@ -23,7 +23,7 @@ The easiest way is to add this to your package.json file
   "import": [
     "@actinc/cspell-config"
   ] 
-} 
+},
 "prettier": "@actinc/prettier-config",
 "eslintConfig": {
   "extends": [
@@ -32,7 +32,7 @@ The easiest way is to add this to your package.json file
   "plugins": [
     "@actinc"
   ]
-}
+},
   ```
 
 If you need more sophisticated customization options, you can instead put this into an .eslintrc.js and/or .prettierrc.js file or whatever supported configuration file you prefer.
