@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/act-org/configs/compare/eslint-plugin1.2.0...eslint-plugin1.3.0) (2022-08-18)
+
+
+### Bug Fixes
+
+* Add typescript path resolver ([d93bf7c](https://github.com/act-org/configs/commit/d93bf7c496a14237eb3386a8485db1578fa0ed6f))
+* Update packaged file list ([bad8b78](https://github.com/act-org/configs/commit/bad8b7889784592b0e27020c1e7e4c6c917fab0b))
+
 ## [1.2.0](https://github.com/act-org/configs/compare/eslint-plugin1.1.0...eslint-plugin1.2.0) (2022-08-04)
 
 
