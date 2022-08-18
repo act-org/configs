@@ -11,8 +11,14 @@
 module.exports = {
   extends: ['./base', './rules/typescript', './rules/prettier'],
   parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'import'],
   parserOptions: {
     ecmaVersion: 2017,
     project: 'tsconfig.json',
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
   },
 };
