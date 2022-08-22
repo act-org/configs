@@ -57,7 +57,7 @@
     "jsonc-loader": "^0.1.1",
     "lerna": "^5.4.3",
     "lint-staged": "13.0.3",
-    "markdownlint-cli": "0.32.1",
+    "markdownlint-cli": "0.32.2",
     "nx": "^14.5.7",
     "prettier": "^2.7.1",
     "standard-version": "^9.5.0",
