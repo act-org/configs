@@ -28,7 +28,7 @@
     "@actinc/markdownlint-config": "file:./packages/markdownlint-config",
     "@actinc/prettier-config": "file:./packages/prettier-config",
     "@actinc/typescript-config": "file:./packages/typescript-config",
-    "@commitlint/cli": "17.0.3",
+    "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.0.3",
     "@cspell/eslint-plugin": "^6.6.1",
     "@types/eslint": "^8.4.5",
